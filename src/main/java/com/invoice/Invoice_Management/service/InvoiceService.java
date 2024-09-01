@@ -6,7 +6,7 @@ import com.invoice.Invoice_Management.dto.ProcessOverdueDTO;
 
 import java.util.List;
 
-public interface INVOICEESERVICE {
+public interface InvoiceService {
     Long createInvoice(InvoiceDTO invoiceDTO);
 
     List<InvoiceDTO> getAllInvoices();

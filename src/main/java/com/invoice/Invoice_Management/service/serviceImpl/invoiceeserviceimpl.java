@@ -8,7 +8,7 @@ import com.invoice.Invoice_Management.exception.IdNotFoundException;
 import com.invoice.Invoice_Management.model.Invoice;
 import com.invoice.Invoice_Management.model.InvoiceStatus;
 import com.invoice.Invoice_Management.repository.InvoiceRepository;
-import com.invoice.Invoice_Management.service.INVOICEESERVICE;
+import com.invoice.Invoice_Management.service.InvoiceService;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,8 +22,8 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Service
-public class invoiceeserviceimpl implements INVOICEESERVICE {
-    private static final Logger logger = LoggerFactory.getLogger(INVOICEESERVICE.class);
+public class invoiceeserviceimpl implements InvoiceService {
+    private static final Logger logger = LoggerFactory.getLogger(InvoiceService.class);
 
     @Autowired
     private InvoiceRepository invoiceRepository;

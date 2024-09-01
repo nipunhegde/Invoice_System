@@ -3,7 +3,7 @@ package com.invoice.Invoice_Management.controller;
 import com.invoice.Invoice_Management.dto.InvoiceDTO;
 import com.invoice.Invoice_Management.dto.PaymentDTO;
 import com.invoice.Invoice_Management.dto.ProcessOverdueDTO;
-import com.invoice.Invoice_Management.service.INVOICEESERVICE;
+import com.invoice.Invoice_Management.service.InvoiceService;
 import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,7 +21,7 @@ public class InvoiceContoller {
 
 
     @Autowired
-    private INVOICEESERVICE invoiceService;
+    private InvoiceService invoiceService;
 
     @PostMapping
     public ResponseEntity<Long> createInvoice(@Valid @RequestBody InvoiceDTO invoiceDTO) {
