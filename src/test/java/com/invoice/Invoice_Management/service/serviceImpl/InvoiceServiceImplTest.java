@@ -110,16 +110,16 @@ public class InvoiceServiceImplTest {
         overdueInvoice.setDueDate(LocalDate.now().minusDays(31)); // Overdue
         overdueInvoice.setStatus(InvoiceStatus.PENDING);
 
-        // Stubbing the repository methods
+
         when(invoiceRepository.findByStatusAndDueDateBefore(
                 any(InvoiceStatus.class), any(LocalDate.class)))
                 .thenReturn(Collections.singletonList(overdueInvoice));
         when(invoiceRepository.save(any(Invoice.class))).thenReturn(overdueInvoice);
 
-        // Act
+
         invoiceService.processOverdueInvoices(overdueDTO);
 
-        // Assert
+
         verify(invoiceRepository, times(1)).save(overdueInvoice);
     }
 
