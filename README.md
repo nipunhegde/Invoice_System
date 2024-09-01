@@ -120,7 +120,7 @@ Repositories
 InvoiceRepository: A JPA repository for performing CRUD operations on the Invoice entity and finding invoices based on status and due date.
 Services
 
-INVOICEESERVICE: Defines the service interface for invoice operations.
+InvoiceService: Defines the service interface for invoice operations.
 invoiceeserviceimpl: Implements the INVOICEESERVICE interface, including methods to create invoices, process payments, and handle overdue invoices.
 Controllers
 
